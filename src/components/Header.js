@@ -18,6 +18,7 @@ const Style = styled.header`
       font-size: 175%;
       line-height: 1;
       font-weight: 600;
+      color: ${props => props.theme.colors.white};
       font-family: Georgia, 'Times New Roman', Times, serif;
     }
     span {
@@ -76,7 +77,7 @@ const UserStatus = function () {
 export default function Header(props) {
   return (
     <Style>
-      <div className="logo"><span><MdOutlineSubtitles/></span> Jimakun</div>
+      <Link className="logo" to="/"><span><MdOutlineSubtitles/></span> Jimakun</Link>
       <div className="user">
         <UserStatus user="props.user"/>
       </div>      
